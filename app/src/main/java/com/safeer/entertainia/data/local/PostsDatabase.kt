@@ -9,10 +9,7 @@ import com.safeer.entertainia.model.Post
 import kotlinx.coroutines.InternalCoroutinesApi
 import kotlinx.coroutines.internal.synchronized
 
-/**
- * Abstract Foodium database.
- * It provides DAO [PostsDao] by using method [getPostsDao].
- */
+
 @Database(entities = [Post::class],
 version = 1)
 abstract class PostsDatabase : RoomDatabase() {

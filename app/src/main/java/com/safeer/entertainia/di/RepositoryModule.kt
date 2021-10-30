@@ -9,7 +9,6 @@ import dagger.hilt.android.components.ActivityRetainedComponent
 import dagger.hilt.android.scopes.ActivityRetainedScoped
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 
-
 @ExperimentalCoroutinesApi
 @InstallIn(ActivityRetainedComponent::class)
 @Module

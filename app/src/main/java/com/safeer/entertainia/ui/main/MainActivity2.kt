@@ -1,5 +1,7 @@
 package com.safeer.entertainia.ui.main
 
+import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.widget.ImageView
 import androidx.activity.viewModels
@@ -49,17 +51,8 @@ class MainActivity2 : AppCompatActivity() {
 
 
     private fun onItemClicked(post: Post, imageView: ImageView) {
-        val options = ActivityOptionsCompat.makeSceneTransitionAnimation(
-            this,
-            imageView,
-            imageView.transitionName
-        )
-        val postId = post.id ?: run {
-            Snackbar.make(findViewById(R.id.rv_main), "Unable to launch details", Snackbar.LENGTH_LONG).show()
-            return
-        }
-        //val intent = PostDetailsActivity.getStartIntent(this, postId)
-        //startActivity(intent, options.toBundle())
+        val openBrowserIntent = Intent(Intent.ACTION_VIEW, Uri.parse("https://in.ign.com/india"))
+        startActivity(openBrowserIntent)
     }
 
     private fun observePosts() {
